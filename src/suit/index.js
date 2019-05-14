@@ -2,18 +2,32 @@
 import is from 'whatitis';
 
 
+// 传递对象
 export class Cat {
+
   constructor( properties ) {
-    is.Object( properties ) ? Object.assign( this, properties ) : this.value = properties;
+    this.value = properties;
+  }
+
+  getValue() {
+    return this.value;
   }
 }
 
-function getValue( cat ) {
-  return cat.value;
+export function map( func ) {
+  return function( cat ) {
+    return func( cat.getValue());
+  };
 }
 
 export function choice( yesCallback, noCallback ) {
   return function( cat ) {
-    return ( getValue( cat ) ? yesCallback : noCallback )( cat );
+    return ( cat.getValue() ? yesCallback : noCallback )( cat );
+  };
+}
+
+export function birth( func ) {
+  return function( config ) {
+    return new Cat( func( config ));
   };
 }

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,user-scalable=no">
+    <title></title>
+    <script type="text/javascript" src="svg.js"></script>
+    <script type="text/javascript" src="suchidea.js"></script>
+    <style type="text/css">
+      #drawing {
+        width: 800px;
+        height: 600px;
+        border: 1px solid #333;
+        margin: 40px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="drawing"></div>
+    <script type="text/javascript">
+      // var draw = SVG( 'drawing' ).size( 800, 600 );
+      // draw.size( 800, 600 ).rect( 100, 100 ).animate().fill( '#f03' ).move( 100,100 );
+      // console.log("SVG( document.getElementById( 'drawing' )):", SVG( document.getElementById( 'drawing' )))
+      // var draw = SVG( document.getElementById( 'drawing' )).size( 800, 600 );
+      // draw.rect( 100, 100 ).fill( '#f06' ).move( 20, 20 );
+      suchidea({
+        dom: document.getElementById( 'drawing' )
+      });
+    </script>
+  </body>
+</html>

@@ -13,8 +13,14 @@ const config = {
   output: {
     name: 'suchidea',
     format: 'umd',
-    file: './dist/suchidea.js'
+    file: './dist/suchidea.js',
+    globals: {
+      'whatenvis': 'env'
+    }
   },
+  // external: [
+  //   'react-dom'
+  // ],
   plugins: [
     nodeResolve(),
     babel({

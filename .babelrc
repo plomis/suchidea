@@ -10,8 +10,6 @@
     }]
   ],
   "plugins": [
-    "@babel/plugin-syntax-dynamic-import",
-    "@babel/plugin-syntax-import-meta",
     "@babel/plugin-proposal-class-properties",
     "@babel/plugin-proposal-json-strings",
     ["@babel/plugin-proposal-decorators", { "legacy": true }],
@@ -25,7 +23,9 @@
     ["@babel/plugin-proposal-pipeline-operator", { "proposal": "minimal" }],
     "@babel/plugin-proposal-nullish-coalescing-operator",
     "@babel/plugin-proposal-do-expressions",
-    "@babel/plugin-proposal-function-bind"
+    "@babel/plugin-proposal-function-bind",
+    "@babel/plugin-syntax-dynamic-import",
+    "@babel/plugin-syntax-import-meta"
   ],
   "env": {
     "commonjs": {
